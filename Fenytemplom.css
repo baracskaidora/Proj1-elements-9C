@@ -5,3 +5,8 @@ body {
     background-size: cover;
     color: white;
 }
+
+img{
+    width: 600px;
+    background-attachment: fixed;
+}
