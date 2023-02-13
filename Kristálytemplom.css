@@ -1,5 +1,5 @@
 body {
-    background-image: url('Jég\ templom\ háttér.webp');
+    background-image: url('Kristály\ templom\ háttér.webp');
     background-repeat: no-repeat;
     background-attachment: fixed;  
     background-size: cover;
@@ -7,7 +7,7 @@ body {
 }
 
 .kep{
-    width: 800px;
+    width: 700px;
 }
 .iras{
     color: white;
