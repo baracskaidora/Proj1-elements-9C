@@ -5,8 +5,8 @@ h1 {
 }
 
 h2 {
-    text-align: center;
-    font-size: 50px;
+  text-align: center;
+  font-size: 50px;
 }
 
 table {
@@ -15,12 +15,20 @@ table {
   width: 100%;
 }
 
-td, th {
+td,
+th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
+  background-color: aqua;
+  text-align: center;
+  border: 1px solid black;
 }
 
 tr:nth-child(even) {
   background-color: #dddddd;
+}
+
+body {
+  background-image: url("fireboy-watergirl-6-fairy-tales-game-icon.png");
 }
