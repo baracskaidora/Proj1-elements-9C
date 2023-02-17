@@ -5,3 +5,10 @@ picture{
     width: 100px;
     vertical-align: left;
 }
+.col{
+  background-color: rgb(149, 239, 239);
+  font-size: 30px;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+}
