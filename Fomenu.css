@@ -1,5 +1,6 @@
-h1 {
+body{
   text-align: center;
+  align-items: center;
 }
 picture{
     width: 100px;
