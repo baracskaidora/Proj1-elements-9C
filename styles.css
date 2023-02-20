@@ -34,3 +34,7 @@ tr:nth-child(even) {
 body {
   background-image: url("fireboy-watergirl-6-fairy-tales-game-icon.png");
 }
+
+img {
+  float: right;
+}
