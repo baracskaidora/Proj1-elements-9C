@@ -1,9 +1,7 @@
-body {
-    background-image: url('Szintek.webp');
-    background-repeat: no-repeat;
-    background-attachment: fixed;  
-    background-size: cover;
+body{
     color: white;
+    text-align: center;
+    align-items: center;
 }
 .kep{
     width: 700px;

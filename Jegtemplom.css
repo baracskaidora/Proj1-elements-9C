@@ -1,8 +1,6 @@
 body {
-    background-image: url('Jég\ templom\ háttér.webp');
-    background-repeat: no-repeat;
-    background-attachment: fixed;  
-    background-size: cover;
+    text-align: center;
+    align-items: center;
     color: white;
 }
 
