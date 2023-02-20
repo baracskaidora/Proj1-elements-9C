@@ -3,8 +3,7 @@ body{
   align-items: center;
 }
 picture{
-    width: 100px;
-    vertical-align: left;
+    width: 100%;
 }
 .col{
   background-color: rgb(149, 239, 239);
