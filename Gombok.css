@@ -4,3 +4,20 @@ body{
 div {
     text-align: center;
   }
+  td,
+th {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  background-color: white;
+  text-align: center;
+  border: 1px solid black;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 200%;
+  }
