@@ -1,8 +1,10 @@
 body{
     text-align: left;
+    font-family: 'Times New Roman', Times, serif;
 }
 div {
     text-align: center;
+    font-family: 'Times New Roman', Times, serif;
   }
   td,
 th {
@@ -11,13 +13,16 @@ th {
   background-color: white;
   text-align: center;
   border: 1px solid black;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 tr:nth-child(even) {
   background-color: #dddddd;
+  font-family: 'Times New Roman', Times, serif;
 }
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 200%;
+    font-family: 'Times New Roman', Times, serif;
   }

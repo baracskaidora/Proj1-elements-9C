@@ -16,7 +16,8 @@
       }
 
       body {
-        background-color: darkorange;
+        background-color: black;
+    color: red;
       }
 
       h1 {
@@ -30,7 +31,6 @@
       }
       td,
 th {
-  border: 1px solid #dddddd;
   padding: 8px;
   background-color: rgb(149, 239, 239);
   text-align: center;
@@ -42,7 +42,7 @@ tr:nth-child(even) {
   background-color: #dddddd;
 width: 100%;}
 table {
-    font-family: arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     border-collapse: collapse;
     width: 100%;
   }
@@ -50,39 +50,43 @@ table {
     font-size: 30px;
     text-align: center;
     width: 100%;
+    margin: 5px;
 }
     </style>
 </head>
 <body>
 
       <table class="row, img-fluid">
-        <tr>
-          <th><div class="col,"><a href="Index.html">Főoldal</a></div></th>
-          <th><div class="col"><a href="Gomb.html">Kvíz oldal</a></div></th>
-          <th><div class="col"><a href="kontakt.html">Kontakt oldal</a></div></th>
-          <th><div class="col"><a href="Erdeitemplom.html">Erdei templom</a></div></th>
-          <th><div class="col"><a href="Fénytemplom.html">Fény templom</a></div></th>
-          <th><div class="col"><a href="Jég templom.html">Jég templom</a></div></th>
-          <th><div class="col"><a href="Kristálytemplom.html">Kristály templom</a></div></th>
-        </tr>
+        <tr><th><div class="col"><a href="Index.html">Főoldal</a></div></th></tr>
+        <tr><th><div class="col"><a href="Gomb.html">Kvíz oldal</a></div></th></tr>
+        <tr><th><div class="col"><a href="kontakt.html">Kontakt oldal</a></div></th></tr>
+        <tr><th><div class="col"><a href="Erdeitemplom.html">Erdei templom</a></div></th></tr>
+        <tr><th><div class="col"><a href="Fénytemplom.html">Fény templom</a></div></th></tr>
+        <tr><th><div class="col"><a href="Jég templom.html">Jég templom</a></div></th></tr>
+        <tr><th><div class="col"><a href="Kristálytemplom.html">Kristály templom</a></div></th></tr>
       </table>
-
+<br><br>
     <h1>Kvíz</h1>
     <h4>Te mit tudsz?</h4>
-    
-    <div class="container mt-3,">
-        <h2>1. kérdés <br> Ki készítette a játékot?</h2>
-        <div class="card" style="width:400px">
-          <img class="card-img-top" src="ember.png" alt="készít" style="width:100%">
-          <div class="card-body">
-            <p><button type="button" onclick="alert('Rossz válasz!')">Josh Graham</button></p>
-            <p><button type="button" onclick="alert('Jó válasz!')">Oslo Albet</button></p>
-            <p><button type="button" onclick="alert('Rossz válasz!')">Peter Steinhauser</button></p>        
-          </div>
-        </div>        </div>
+    <br>
+    <br>
+    <br><br><br><br><br><br><br>
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm bg-black background-color text-white">    <div class="container mt-3,">
+            <h2> 1. kérdés <br> Ki készítette a játékot?</h2> <br> <br>
+            <div class="card" style="width:400px">
+              <img class="card-img-top" src="ember.png" alt="készít" style="width:100%">
+              <div class="card-body">
+                <p><button type="button" onclick="alert('Rossz válasz!')">Josh Graham</button></p>
+                <p><button type="button" onclick="alert('Jó válasz!')">Oslo Albet</button></p>
+                <p><button type="button" onclick="alert('Rossz válasz!')">Peter Steinhauser</button></p>        
+              </div>
+            </div>        </div></div>
 
-        <div class="container mt-3">
-            <h2>2. kérdés <br> Melyik állítás igaz erre a játékra?</h2>
+
+          <div class="col-sm bg-black text-white">        <div class="container mt-3">
+            <h2>2. kérdés <br> Melyik állítás igaz erre a játékra?</h2> <br> <br> <br>
            <div class="card" style="width:400px">
            <img class="card-img-top" src="Kar.jpg" alt="készít" style="width:100%">
             <div class="card-body">
@@ -90,157 +94,144 @@ table {
                 <p><button type="button" onclick="alert('Rossz válasz!')">3-szor kell meglökni a kart, mielőtt működik</button></p>
                 <p><button type="button" onclick="alert('Rossz válasz!')">A gomb lenyomva marad, miután megnyomtad őket </button></p>
             </div>
-        </div>        </div>
+        </div>        </div></div>
 
-        <div class="container mt-3">
-            <h2>3. kérdés <br> Kik a katakterek?</h2>
+
+          <div class="col-sm bg-black text-white">        <div class="container mt-3">
+            <h2>3. kérdés <br> Kik a katakterek?</h2> <br>  
             <div class="card" style="width:400px">
               <img class="card-img-top" src="F and w.png" alt="készít" style="width:100%">
               <div class="card-body">
-            <p><button type="button" onclick="alert('Rossz válasz!')">Tüzfiú és Vizlány</button></p>
-            <p><button type="button" onclick="alert('Rossz válasz!')">Tűzfiu és Vízlány</button></p>
-            <p><button type="button" onclick="alert('Jó válasz!')">Tűzfiú és Vízlány</button></p>
+         <p><button type="button" onclick="alert('Rossz válasz!')">Tüzfiú és Vizlány</button></p>
+         <p><button type="button" onclick="alert('Rossz válasz!')">Tűzfiu és Vízlány</button></p>
+          <p><button type="button" onclick="alert('Jó válasz!')">Tűzfiú és Vízlány</button></p>
         </div>        </div>
+    </div></div>
+        </div>  
+      </div>
     </div>
 
-    <div class="container mt-3">
-        <h2>4. kérdés <br>Mikor jelent meg az Fény templom?</h2>
-        <div class="card" style="width:400px">
-          <img class="card-img-top" src="Calendar.jpg" alt="készít" style="width:100%">
-          <div class="card-body">
-            <p><button type="button" onclick="alert('Rossz válasz!')">2011. március 5.</button></p>
-            <p><button type="button" onclick="alert('Jó válasz!')">2010. október. 26.</button></p>
-            <p><button type="button" onclick="alert('Rossz válasz!')">2009. november. 6.</button></p>
-        </div>
-        </div>        </div>
 
-        <div class="container mt-3">
-            <h2>5. kérdés <br> Melyik karakter megy gyorsabban a jégen?</h2>
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm bg-black background-color text-white">    <div class="container mt-3,">
+            <h2>4. kérdés <br>Mikor jelent meg <br> az Fény templom?</h2>
+            <div class="card" style="width:400px">
+              <img class="card-img-top" src="Calendar.jpg" alt="készít" style="width:100%">
+              <div class="card-body">
+                <p><button type="button" onclick="alert('Rossz válasz!')">2011. március 5.</button></p>
+                <p><button type="button" onclick="alert('Jó válasz!')">2010. október. 26.</button></p>
+                <p><button type="button" onclick="alert('Rossz válasz!')">2009. november. 6.</button></p>       
+              </div>
+            </div>        </div></div>
+
+
+          <div class="col-sm bg-black text-white">        <div class="container mt-3">
+            <h2>5. kérdés <br> Mik a Vízlány gombjai?</h2> <br> <br>
+            <div class="card" style="width:400px">
+            <img class="card-img-top" src="Gombok.png" alt="készít" style="width:100%">
+             <div class="card-body">
+                 <p><button type="button" onclick="alert('Rossz válasz!')">Fel,Jobb,Bal nyíl</button></p>
+                 <p><button type="button" onclick="alert('Jó válasz!')">A,W,S</button></p>
+                 <p><button type="button" onclick="alert('Rossz válasz!')">J,K,I</button></p>
+            </div>
+        </div>        </div></div>
+
+
+          <div class="col-sm bg-black text-white">        <div class="container mt-3">
+            <h2>6. kérdés <br> Melyik templomnak van a legtöbb szintje?</h2>
+            <div class="card" style="width:400px">
+              <img class="card-img-top" src="Dzungel templom.jpg" alt="készít" style="width:100%">
+              <div class="card-body">
+                <p><button type="button" onclick="alert('Rossz válasz!')">Jég</button></p>
+      <p><button type="button" onclick="alert('Rossz válasz!')">Kristály</button></p>
+      <p><button type="button" onclick="alert('Jó válasz!')">Fény</button></p>
+        </div>        </div>
+    </div></div>
+        </div>  
+      </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm bg-black background-color text-white">    <div class="container mt-3,">
+            <h2>7. kérés <br> Hány darabja van pontosan?</h2>
+           <div class="card" style="width:400px">
+           <img class="card-img-top" src="Számok 2.jpg" alt="készít" style="width:100%">
+            <div class="card-body">
+               <p><button type="button" onclick="alert('Jó válasz!')">41</button></p>
+               <p><button type="button" onclick="alert('Rossz válasz!')">39</button></p>
+               <p><button type="button" onclick="alert('Rossz válasz!')">37</button></p>
+              </div>
+            </div>        </div></div>
+
+
+          <div class="col-sm bg-black text-white">        <div class="container mt-3">
+            <h2>8.kérdés <br> Az erdei templomnak hány szintje van?</h2>
+            <div class="card" style="width:400px">
+            <img class="card-img-top" src="Számok.png" alt="készít" style="width:100%">
+             <div class="card-body">
+                 <p><button type="button" onclick="alert('Rossz válasz!')">35</button></p>
+                 <p><button type="button" onclick="alert('Rossz válasz!')">33</button></p>
+                 <p><button type="button" onclick="alert('Jó válasz!')">32</button></p>
+            </div>
+        </div>        </div></div>
+
+
+          <div class="col-sm bg-black text-white">        <div class="container mt-3">
+            <h2>9. kérdés <br> Melyik karakter megy gyorsabban a jégen?</h2>
            <div class="card" style="width:400px">
            <img class="card-img-top" src="Jegkori.jpg" alt="készít" style="width:100%">
             <div class="card-body">
                 <p><button type="button" onclick="alert('Jó válasz!')">Tűzfiú</button></p>
                 <p><button type="button" onclick="alert('Rossz válasz!')">Mindegyik</button></p>
                 <p><button type="button" onclick="alert('Rossz válasz!')">Jéglány</button></p>
-            </div>
         </div>        </div>
+    </div></div>
+        </div>  
+      </div>
+    </div>
 
-            <div class="container mt-3">
-                <h2>6. kérdés <br> Melyik templomnak van a legtöbb szintje?</h2>
-                <div class="card" style="width:400px">
-                  <img class="card-img-top" src="Dzungel templom.jpg" alt="készít" style="width:100%">
-                  <div class="card-body">
-                    <p><button type="button" onclick="alert('Rossz válasz!')">Jég</button></p>
-          <p><button type="button" onclick="alert('Rossz válasz!')">Kristály</button></p>
-          <p><button type="button" onclick="alert('Jó válasz!')">Fény</button></p>
-        </div>
-    </div>        </div>
-
-             <div class="container mt-3">
-                 <h2>7. kérés <br> Hány darabja van pontosan?</h2>
-                <div class="card" style="width:400px">
-                <img class="card-img-top" src="Számok 2.jpg" alt="készít" style="width:100%">
-                 <div class="card-body">
-                    <p><button type="button" onclick="alert('Jó válasz!')">41</button></p>
-                    <p><button type="button" onclick="alert('Rossz válasz!')">39</button></p>
-                    <p><button type="button" onclick="alert('Rossz válasz!')">37</button></p>
-                </div>
-            </div>        </div>
-        
-            <div class="container mt-3">
-                <h2>8.kérdés <br> Az erdei templomnak hány szintje van?</h2>
-               <div class="card" style="width:400px">
-               <img class="card-img-top" src="Számok.png" alt="készít" style="width:100%">
-                <div class="card-body">
-                    <p><button type="button" onclick="alert('Rossz válasz!')">35</button></p>
-                    <p><button type="button" onclick="alert('Rossz válasz!')">33</button></p>
-                    <p><button type="button" onclick="alert('Jó válasz!')">32</button></p>
-                </div>
-            </div>        </div>
-
-                    <div class="container mt-3">
-                        <h2>9. kérdés <br> Mik a Vízlány gombjai?</h2>
-                       <div class="card" style="width:400px">
-                       <img class="card-img-top" src="Gombok.png" alt="készít" style="width:100%">
-                        <div class="card-body">
-                            <p><button type="button" onclick="alert('Rossz válasz!')">Fel,Jobb,Bal nyíl</button></p>
-                            <p><button type="button" onclick="alert('Jó válasz!')">A,W,S</button></p>
-                            <p><button type="button" onclick="alert('Rossz válasz!')">J,K,I</button></p>
-                        </div>
-                    </div>        </div>
+    
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm bg-black background-color text-white">    <div class="container mt-3,">
+            <h2><br> 10. kérdés <br> Milyen színű Tűzfiú szeme?</h2>
+            <div class="card" style="width:400px">
+            <img class="card-img-top" src="Szemek.jpg" alt="készít" style="width:100%">
+             <div class="card-body">
+                 <p><button type="button" onclick="alert('Rossz válasz!')">Fehér</button></p>
+                 <p><button type="button" onclick="alert('Jó válasz!')">Citromsárga</button></p>
+                 <p><button type="button" onclick="alert('Rossz válasz!')">Piros</button></p>
+              </div>
+            </div>        </div></div>
 
 
-                    <div class="container mt-3">
-                        <h2>10. kérdés <br> Melyik folyadék nyírja ki mindkét szereplőt?</h2>
-                       <div class="card" style="width:400px">
-                       <img class="card-img-top" src="Radioaktiv.jpg" alt="készít" style="width:100%">
-                        <div class="card-body">
-                            <p><button type="button" onclick="alert('Rossz válasz!')">Higany</button></p>
-                            <p><button type="button" onclick="alert('Rossz válasz!')">Nitroglicerin</button></p>
-                            <p><button type="button" onclick="alert('Jó válasz!')">Zöld vagy fekete nyálka</button></p>
-                        </div>
-                    </div>        </div>
-
-                    <div class="container mt-3">
-                        <h2>11. kérdés <br> Milyen színű Tűzfiú szeme?</h2>
-                       <div class="card" style="width:400px">
-                       <img class="card-img-top" src="Szemek.jpg" alt="készít" style="width:100%">
-                        <div class="card-body">
-                            <p><button type="button" onclick="alert('Rossz válasz!')">Fehér</button></p>
-                            <p><button type="button" onclick="alert('Jó válasz!')">Citromsárga</button></p>
-                            <p><button type="button" onclick="alert('Rossz válasz!')">Piros</button></p>
-                        </div>
-                    </div>        </div>
-
-                    <div class="container mt-3">
-                        <h2>12. kérdés <br> MIlyen Vízlány hajstílusa? </h2>
-                       <div class="card" style="width:400px">
-                       <img class="card-img-top" src="haj.jpg" alt="készít" style="width:100%">
-                        <div class="card-body">
-                            <p><button type="button" onclick="alert('Rossz válasz!')">Sötétkék hosszú haj</button></p>
-                            <p><button type="button" onclick="alert('Rossz válasz!')">Kék coff</button></p>
-                            <p><button type="button" onclick="alert('Jó válasz!')">Kék lófarok</button></p>
-                        </div>
-                    </div>        </div>
-                    
-                    <div class="container-fluid">
-                      <div class="row">
-                        <div class="col-sm bg-black background-color text-white">    <div class="container mt-3,">
-                          <h2>1. kérdés <br> Ki készítette a játékot?</h2>
-                          <div class="card" style="width:400px">
-                            <img class="card-img-top" src="ember.png" alt="készít" style="width:100%">
-                            <div class="card-body">
-                              <p><button type="button" onclick="alert('Rossz válasz!')">Josh Graham</button></p>
-                              <p><button type="button" onclick="alert('Jó válasz!')">Oslo Albet</button></p>
-                              <p><button type="button" onclick="alert('Rossz válasz!')">Peter Steinhauser</button></p>        
-                            </div>
-                          </div>        </div></div>
+          <div class="col-sm bg-black text-white">        <div class="container mt-3">
+            <h2>11. kérdés <br> Melyik folyadék nyírja ki mindkét szereplőt?</h2>
+            <div class="card" style="width:400px">
+            <img class="card-img-top" src="Radioaktiv.jpg" alt="készít" style="width:100%">
+             <div class="card-body">
+                 <p><button type="button" onclick="alert('Rossz válasz!')">Higany</button></p>
+                 <p><button type="button" onclick="alert('Rossz válasz!')">Nitroglicerin</button></p>
+                 <p><button type="button" onclick="alert('Jó válasz!')">Zöld vagy fekete nyálka</button></p>
+            </div>
+        </div>        </div></div>
 
 
-                        <div class="col-sm bg-black text-white">        <div class="container mt-3">
-                          <h2>2. kérdés <br> Melyik állítás igaz erre a játékra?</h2>
-                         <div class="card" style="width:400px">
-                         <img class="card-img-top" src="Kar.jpg" alt="készít" style="width:100%">
-                          <div class="card-body">
-                              <p><button type="button" onclick="alert('Jó válasz!')">Minden szint után mini osztályzatot kapsz </button></p>                       
-                              <p><button type="button" onclick="alert('Rossz válasz!')">3-szor kell meglökni a kart, mielőtt működik</button></p>
-                              <p><button type="button" onclick="alert('Rossz válasz!')">A gomb lenyomva marad, miután megnyomtad őket </button></p>
-                          </div>
-                      </div>        </div></div>
-
-
-                        <div class="col-sm bg-black text-white">        <div class="container mt-3">
-                          <h2>3. kérdés <br> Kik a katakterek?</h2>
-                          <div class="card" style="width:400px">
-                            <img class="card-img-top" src="F and w.png" alt="készít" style="width:100%">
-                            <div class="card-body">
-                          <p><button type="button" onclick="alert('Rossz válasz!')">Tüzfiú és Vizlány</button></p>
-                         <p><button type="button" onclick="alert('Rossz válasz!')">Tűzfiu és Vízlány</button></p>
-                          <p><button type="button" onclick="alert('Jó válasz!')">Tűzfiú és Vízlány</button></p>
-                      </div>        </div>
-                  </div></div>
-                      </div>  
-                    </div>
-                  </div>
+          <div class="col-sm bg-black text-white">        <div class="container mt-3">
+            <h2> <br> 12. kérdés <br> MIlyen Vízlány hajstílusa? </h2>
+            <div class="card" style="width:400px">
+            <img class="card-img-top" src="haj.jpg" alt="készít" style="width:100%">
+             <div class="card-body">
+                 <p><button type="button" onclick="alert('Rossz válasz!')">Sötétkék hosszú haj</button></p>
+                 <p><button type="button" onclick="alert('Rossz válasz!')">Kék coff</button></p>
+                 <p><button type="button" onclick="alert('Jó válasz!')">Kék lófarok</button></p>
+        </div>        </div>
+    </div></div>
+        </div>  
+      </div>
+    </div>
 </body>
 </html>

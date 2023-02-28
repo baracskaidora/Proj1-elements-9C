@@ -6,10 +6,12 @@ body {
 
 .kep{
     width: 700px;
+    font-family: 'Times New Roman', Times, serif;
 }
 .iras{
     color: white;
     font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
 }
 .col{
     background-color: rgb(149, 239, 239);
@@ -17,10 +19,13 @@ body {
     border: 1px solid black;
     border-radius: 10px;
     text-align: center;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
 }
 .row{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 td, th{
     width: 200%;
+    font-family: 'Times New Roman', Times, serif;
 }

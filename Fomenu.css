@@ -1,14 +1,17 @@
 body{
   text-align: center;
   align-items: center;
+  font-family: 'Times New Roman', Times, serif;
 }
 picture{
     width: 100%;
 }
 .col{
-  background-color: rgb(149, 239, 239);
+  background-color: rgb(196, 238, 238);
   font-size: 30px;
   border: 1px solid black;
   border-radius: 10px;
   text-align: center;
+  padding: 10px;
+  font-family: 'Times New Roman', Times, serif;
 }
