@@ -3,9 +3,10 @@ body{
     text-align: center;
     align-items: center;
     font-family: 'Times New Roman', Times, serif;
+        background-color: rgb(97, 46, 10); 
 }
 .kep{
-    width: 700px;
+    width: 60%;
 }
 .iras{
     color: white;
@@ -26,6 +27,6 @@ body{
     font-family: 'Times New Roman', Times, serif;
 }
 td, th{
-    width: 200%;
+    width: 100%;
     font-family: 'Times New Roman', Times, serif;
 }
