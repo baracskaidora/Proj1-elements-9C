@@ -17,63 +17,67 @@ let countdown;
 const quizArray = [
   {
     id: "0",
-    question: "Melyik küldetés célja a morkit bányászás",
-    options: ["Helyszíni finomítás", "Bányászati Expedíció", "Kíséret", "Kitermelés"],
-    correct: "Bányászati Expedíció",
+    question: "Ki készítette a Játékot?",
+    options: ["Oslo Albet", "Peter Steinhauser", "Josh Graham"],
+    correct: "Oslo Albet",
   },
   {
     id: "1",
-    question: "Melyik törpének van lángszórója?",
-    options: ["Felderítő", "Lövész", "Fúrós", "Mérnök"],
-    correct: "Fúrós",
+    question: "Melyik állítás igaz erre a játékra?",
+    options: ["Minden szint után mini osztályzatot kapsz", "3-szor kell meglökni a kart, mielőtt működik", "A gomb lenyomva marad, miután megnyomtad őket"],
+    correct: "Minden szint után mini osztályzatot kapsz",
   },
   {
     id: "2",
-    question: "Hányszor szenvedhet maradandó sérülést Doretta?",
-    options: ["2", "4", "5", "3"],
-    correct: "2",
+    question: "Kik a katakterek?",
+    options: ["Tüzfiú és Vizlány", "Tűzfiu és Vízlány", "Tűzfiú és Vízlány"],
+    correct: "Tűzfiú és Vízlány",
   },
   {
     id: "3",
-    question: "Melyik küldetés célja a morkit finomítás?",
-    options: ["Helyszíni finomítás", "Bányászati Expedíció", "Kíséret", "Kitermelés"],
-    correct: "Helyszíni finomítás",
+    question: "Mikor jelent meg a Fény templom?",
+    options: [
+      "2008. szeptember. 27.",
+      "2010. október. 26.",
+      "2013. január. 30.",
+    ],
+    correct: "2010. október. 26.",
   },
   {
     id: "4",
-    question: "Melyik törpének van csali gránátja?",
-    options: ["Felderítő","Mérnök","Lövész","Fúrós"],
-    correct: "Mérnök",
+    question: "Mik a Vízlány gombjai?",
+    options: ["A, W, D", "Nyilak", "Igen"],
+    correct: "A, W, D",
   },
   {
     id: "5",
-    question: "Melyik fegyvernek van másodlagos tüzelési módja?",
-    options: ["Lead storm", "LOK-1", "Deepcore GK2", "Cryo ágyú"],
-    correct: "LOK-1",
+    question: "Melyik templomnak van a legtöbb szintje?",
+    options: ["Jég", "Fény", "Erdő"],
+    correct: "Fény",
   },
   {
     id: "6",
-    question: "Melyik törpnek vörös a szakála?",
-    options: ["Fúrós", "Mérnök", "Lövész", "Felderítő"],
-    correct: "Felderítő",
+    question: "Hány szintje van pontosan?",
+    options: ["41", "34", "50"],
+    correct: "41",
   },
   {
     id: "7",
-    question: "A Kitermelés küldetés végén hány percig kell túlélned?",
-    options: ["2", "1 és fél", "Semeddig", "1"],
-    correct: "2",
+    question: "Az erdei templomnak hány szintje van?",
+    options: ["32", "39", "35"],
+    correct: "32",
   },
   {
     id: "8",
-    question: "Melyik küldetés célja az Ommorán-szívkő begyűjtése?",
-    options: ["Kiiktatás", "Ipari szabotázs", "Kíséret", "Kitermelés"],
-    correct: "Kíséret",
+    question: "Melyik karakter megy gyorsabban a jégen?",
+    options: ["Semelyik", "Vízlány", "Tűzfiú",],
+    correct: "Tűzfiú",
   },
   {
     id: "9",
-    question: "Hogy hívják az ipari szabotázs küldetésen a főellenséget?",
-    options: ["Pusztító", "Karl","Nemezis", "Gondviselő"],
-    correct: "Gondviselő",
+    question: "Milyen színű Tűzfiú szeme?",
+    options: ["Narancssárga", "Citromsárga", "Fehér"],
+    correct: "Citromsárga",
   },
 ];
 
@@ -86,21 +90,18 @@ restart.addEventListener("click", () => {
 nextBtn.addEventListener(
   "click",
   (displayNext = () => {
-
     questionCount += 1;
 
     if (questionCount == quizArray.length) {
       //hide question container and display score
       displayContainer.classList.add("hide");
       scoreContainer.classList.remove("hide");
-      
-      userScore.innerHTML =
-        "Az eredményed " + scoreCount + "/" + questionCount;
+
+      userScore.innerHTML = "Az eredményed " + scoreCount + "/" + questionCount;
     } else {
-      
       countOfQuestion.innerHTML =
         questionCount + 1 + " of " + quizArray.length + " Question";
-      
+
       quizDisplay(questionCount);
       count = 25;
       clearInterval(countdown);
@@ -122,7 +123,7 @@ const timerDisplay = () => {
 
 const quizDisplay = (questionCount) => {
   let quizCards = document.querySelectorAll(".container-mid");
-  
+
   quizCards.forEach((card) => {
     card.classList.add("hide");
   });
@@ -131,23 +132,21 @@ const quizDisplay = (questionCount) => {
 };
 
 function quizCreator() {
-  
   quizArray.sort(() => Math.random() - 0.5);
-  
+
   for (let i of quizArray) {
-    
     i.options.sort(() => Math.random() - 0.5);
-    
+
     let div = document.createElement("div");
     div.classList.add("container-mid", "hide");
-    
+
     countOfQuestion.innerHTML = 1 + " of " + quizArray.length + " Question";
-    
+
     let question_DIV = document.createElement("p");
     question_DIV.classList.add("question");
     question_DIV.innerHTML = i.question;
     div.appendChild(question_DIV);
-    
+
     div.innerHTML += `
     <button class="option-div" onclick="checker(this)">${i.options[0]}</button>
      <button class="option-div" onclick="checker(this)">${i.options[1]}</button>
@@ -169,7 +168,7 @@ function checker(userOption) {
     scoreCount++;
   } else {
     userOption.classList.add("incorrect");
-    
+
     options.forEach((element) => {
       if (element.innerText == quizArray[questionCount].correct) {
         element.classList.add("correct");
@@ -178,7 +177,7 @@ function checker(userOption) {
   }
 
   clearInterval(countdown);
-  
+
   options.forEach((element) => {
     element.disabled = true;
   });
@@ -213,11 +212,11 @@ function myFunction() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Lenyitás"; 
+    btnText.innerHTML = "Lenyitás";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Vissacsukás"; 
+    btnText.innerHTML = "Vissacsukás";
     moreText.style.display = "inline";
   }
 }
@@ -228,11 +227,11 @@ function myFunction2() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Lenyitás"; 
+    btnText.innerHTML = "Lenyitás";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Vissacsukás"; 
+    btnText.innerHTML = "Vissacsukás";
     moreText.style.display = "inline";
   }
 }
@@ -243,11 +242,11 @@ function myFunction3() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Lenyitás"; 
+    btnText.innerHTML = "Lenyitás";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Vissacsukás"; 
+    btnText.innerHTML = "Vissacsukás";
     moreText.style.display = "inline";
   }
 }
@@ -258,11 +257,11 @@ function myFunction4() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Lenyitás"; 
+    btnText.innerHTML = "Lenyitás";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Vissacsukás"; 
+    btnText.innerHTML = "Vissacsukás";
     moreText.style.display = "inline";
   }
 }
@@ -273,11 +272,11 @@ function myFunction5() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Lenyitás"; 
+    btnText.innerHTML = "Lenyitás";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Vissacsukás"; 
+    btnText.innerHTML = "Vissacsukás";
     moreText.style.display = "inline";
   }
 }
@@ -288,11 +287,11 @@ function myFunction6() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Lenyitás"; 
+    btnText.innerHTML = "Lenyitás";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Vissacsukás"; 
+    btnText.innerHTML = "Vissacsukás";
     moreText.style.display = "inline";
   }
 }
@@ -303,11 +302,11 @@ function myFunction7() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Lenyitás"; 
+    btnText.innerHTML = "Lenyitás";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Vissacsukás"; 
+    btnText.innerHTML = "Vissacsukás";
     moreText.style.display = "inline";
   }
 }
@@ -318,11 +317,11 @@ function myFunction8() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Lenyitás"; 
+    btnText.innerHTML = "Lenyitás";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Vissacsukás"; 
+    btnText.innerHTML = "Vissacsukás";
     moreText.style.display = "inline";
   }
 }
@@ -333,11 +332,11 @@ function myFunction9() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Lenyitás"; 
+    btnText.innerHTML = "Lenyitás";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Vissacsukás"; 
+    btnText.innerHTML = "Vissacsukás";
     moreText.style.display = "inline";
   }
 }
@@ -348,53 +347,56 @@ function myFunction10() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Lenyitás"; 
+    btnText.innerHTML = "Lenyitás";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Vissacsukás"; 
+    btnText.innerHTML = "Vissacsukás";
     moreText.style.display = "inline";
   }
-}function myFunction11() {
+}
+function myFunction11() {
   var dots = document.getElementById("dots11");
   var moreText = document.getElementById("more11");
   var btnText = document.getElementById("myBtn11");
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Lenyitás"; 
+    btnText.innerHTML = "Lenyitás";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Vissacsukás"; 
+    btnText.innerHTML = "Vissacsukás";
     moreText.style.display = "inline";
   }
-}function myFunction12() {
+}
+function myFunction12() {
   var dots = document.getElementById("dots12");
   var moreText = document.getElementById("more12");
   var btnText = document.getElementById("myBtn12");
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Lenyitás"; 
+    btnText.innerHTML = "Lenyitás";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Vissacsukás"; 
+    btnText.innerHTML = "Vissacsukás";
     moreText.style.display = "inline";
   }
-}function myFunction13() {
+}
+function myFunction13() {
   var dots = document.getElementById("dots13");
   var moreText = document.getElementById("more13");
   var btnText = document.getElementById("myBtn13");
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Lenyitás"; 
+    btnText.innerHTML = "Lenyitás";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Vissacsukás"; 
+    btnText.innerHTML = "Vissacsukás";
     moreText.style.display = "inline";
   }
 }
@@ -405,11 +407,11 @@ function myFunction14() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Lenyitás"; 
+    btnText.innerHTML = "Lenyitás";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Vissacsukás"; 
+    btnText.innerHTML = "Vissacsukás";
     moreText.style.display = "inline";
   }
 }
@@ -420,11 +422,11 @@ function myFunction15() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Lenyitás"; 
+    btnText.innerHTML = "Lenyitás";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Vissacsukás"; 
+    btnText.innerHTML = "Vissacsukás";
     moreText.style.display = "inline";
   }
 }
@@ -435,11 +437,11 @@ function myFunction16() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Lenyitás"; 
+    btnText.innerHTML = "Lenyitás";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Vissacsukás"; 
+    btnText.innerHTML = "Vissacsukás";
     moreText.style.display = "inline";
   }
 }
@@ -450,11 +452,11 @@ function myFunction17() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Lenyitás"; 
+    btnText.innerHTML = "Lenyitás";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Vissacsukás"; 
+    btnText.innerHTML = "Vissacsukás";
     moreText.style.display = "inline";
   }
 }
@@ -465,11 +467,11 @@ function myFunction18() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Lenyitás"; 
+    btnText.innerHTML = "Lenyitás";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Vissacsukás"; 
+    btnText.innerHTML = "Vissacsukás";
     moreText.style.display = "inline";
   }
 }
@@ -480,11 +482,11 @@ function myFunction19() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Lenyitás"; 
+    btnText.innerHTML = "Lenyitás";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Vissacsukás"; 
+    btnText.innerHTML = "Vissacsukás";
     moreText.style.display = "inline";
   }
 }
@@ -495,11 +497,11 @@ function myFunction20() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Lenyitás"; 
+    btnText.innerHTML = "Lenyitás";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Vissacsukás"; 
+    btnText.innerHTML = "Vissacsukás";
     moreText.style.display = "inline";
   }
 }
@@ -510,39 +512,41 @@ function myFunction21() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Lenyitás"; 
+    btnText.innerHTML = "Lenyitás";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Vissacsukás"; 
+    btnText.innerHTML = "Vissacsukás";
     moreText.style.display = "inline";
   }
-}function myFunction22() {
+}
+function myFunction22() {
   var dots = document.getElementById("dots22");
   var moreText = document.getElementById("more22");
   var btnText = document.getElementById("myBtn22");
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Lenyitás"; 
+    btnText.innerHTML = "Lenyitás";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Vissacsukás"; 
+    btnText.innerHTML = "Vissacsukás";
     moreText.style.display = "inline";
   }
-}function myFunction23() {
+}
+function myFunction23() {
   var dots = document.getElementById("dots23");
   var moreText = document.getElementById("more23");
   var btnText = document.getElementById("myBtn23");
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Lenyitás"; 
+    btnText.innerHTML = "Lenyitás";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Vissacsukás"; 
+    btnText.innerHTML = "Vissacsukás";
     moreText.style.display = "inline";
   }
 }
@@ -553,11 +557,11 @@ function myFunction24() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Lenyitás"; 
+    btnText.innerHTML = "Lenyitás";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Vissacsukás"; 
+    btnText.innerHTML = "Vissacsukás";
     moreText.style.display = "inline";
   }
 }
@@ -568,11 +572,11 @@ function myFunction25() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Lenyitás"; 
+    btnText.innerHTML = "Lenyitás";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Vissacsukás"; 
+    btnText.innerHTML = "Vissacsukás";
     moreText.style.display = "inline";
   }
 }
