@@ -18,7 +18,7 @@ const quizArray = [
   {
     id: "0",
     question: "Ki készítette a Játékot?",
-    options: ["Oslo Albet", "Peter Steinhauser", "Josh Graham"],
+    options: ["Josh Graham", "Oslo Albet", "Peter Steinhauser"],
     correct: "Oslo Albet",
   },
   {
@@ -46,25 +46,25 @@ const quizArray = [
   {
     id: "4",
     question: "Mik a Vízlány gombjai?",
-    options: ["A, W, D", "Nyilak", "Igen"],
+    options: ["A, W, D", "Nyilak", "J, I, K"],
     correct: "A, W, D",
   },
   {
     id: "5",
     question: "Melyik templomnak van a legtöbb szintje?",
-    options: ["Jég", "Fény", "Erdő"],
+    options: ["Jég", "Fény", "Kristály"],
     correct: "Fény",
   },
   {
     id: "6",
     question: "Hány szintje van pontosan?",
-    options: ["41", "34", "50"],
+    options: ["41", "39", "43"],
     correct: "41",
   },
   {
     id: "7",
     question: "Az erdei templomnak hány szintje van?",
-    options: ["32", "39", "35"],
+    options: ["32", "33", "35"],
     correct: "32",
   },
   {
@@ -79,6 +79,19 @@ const quizArray = [
     options: ["Narancssárga", "Citromsárga", "Fehér"],
     correct: "Citromsárga",
   },
+  {
+    id: "10",
+    question: "Milyen vízlány hajstílusa?",
+    options: ["Sötétkék hosszú haj", "Kék coff", "Kék lófarok"],
+    correct: "Kék lófarok",
+  },
+  {
+    id: "11",
+    question: "Melyik folyadék nyírja ki mindkét szereplőt?",
+    options: ["Higany", "Nitroglicerin", "Zöld vagy fekete nyálka"],
+    correct: "Zöld vagy fekete nyálka",
+  },
+  
 ];
 
 restart.addEventListener("click", () => {
@@ -151,7 +164,6 @@ function quizCreator() {
     <button class="option-div" onclick="checker(this)">${i.options[0]}</button>
      <button class="option-div" onclick="checker(this)">${i.options[1]}</button>
       <button class="option-div" onclick="checker(this)">${i.options[2]}</button>
-      <button class="option-div" onclick="checker(this)">${i.options[3]}</button>
     `;
     quizContainer.appendChild(div);
   }
