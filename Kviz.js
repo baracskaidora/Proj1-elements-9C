@@ -21,8 +21,7 @@ const quizArray = [
     options: ["Josh Graham", "Oslo Albet", "Peter Steinhauser"],
     correct: "Oslo Albet",
   },
-  {
-    id: "1",
+  { id: "1",
     question: "Melyik állítás igaz erre a játékra?",
     options: ["Minden szint után mini osztályzatot kapsz", "3-szor kell meglökni a kart, mielőtt működik", "A gomb lenyomva marad, miután megnyomtad őket"],
     correct: "Minden szint után mini osztályzatot kapsz",
@@ -113,7 +112,7 @@ nextBtn.addEventListener(
       userScore.innerHTML = "Az eredményed " + scoreCount + "/" + questionCount;
     } else {
       countOfQuestion.innerHTML =
-        questionCount + 1 + " of " + quizArray.length + " Question";
+        questionCount + 1 + " a " + quizArray.length + " kérdésből";
 
       quizDisplay(questionCount);
       count = 25;
